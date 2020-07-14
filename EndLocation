@@ -1,0 +1,33 @@
+import * as React from 'react';
+import { FlatList, Text, View, StyleSheet, Image } from 'react-native';
+
+export default function EndLocation() {
+  return (
+    <View style={styles.container}>
+      <FlatList 
+      data={[
+        {key: 'Home'},
+        {key: 'Work'},
+        {key: 'Store'},
+        {key: 'School'}
+      ]}
+      renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+  },
+  item: {
+    margin: 8,
+    marginTop: 0,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
