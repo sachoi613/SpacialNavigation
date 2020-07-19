@@ -1,0 +1,50 @@
+import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import bellalogo from './assets/bellalogo.png';
+
+export default function App() {
+
+  return (
+    <View style={styles.container}>
+      <Image source = {bellalogo} style={styles.logo} />
+      <Text style = {styles.instructions}>
+        Bella Labs 
+      </Text>
+
+      <TouchableOpacity onPress={() => alert('Go do work :) ily you can do it')} style={styles.button}>
+        <Text style={styles.buttonText}> Motivation</Text>
+      </TouchableOpacity>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logo: {
+    width: 300,
+    height: 300,
+    marginBottom: 0,
+  },
+  instructions: {
+    color: '#fff',
+    fontSize: 30,
+    marginHorizontal: 0,
+    marginBottom: 20,
+    fontWeight: 'bold',
+  },
+  button: {
+    backgroundColor: "white",
+    padding: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    fontSize: 15,
+    color: '#000',
+  }, 
+});
